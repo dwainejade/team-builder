@@ -8,7 +8,7 @@ function App() {
         {
             id: 1,
             name:'Dwaine',
-            role:'fake designer',
+            role:'Frontend',
             email:'Dwaine@lambdastudents.com'
         }
     ]);
@@ -16,7 +16,7 @@ function App() {
     const addNewMember = member => {
         const newMember = {
             id: Date.now(),
-            name: member.name
+            ...member
         }
         setMembers([...members, newMember])
     }
@@ -24,8 +24,8 @@ function App() {
     return (
         <div className="App">
             <Form addNewMember={addNewMember} />
-            <Members members={members} />
             <h1>Team Members</h1>
+            <Members members={members} />
         </div>
     );
 }

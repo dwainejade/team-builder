@@ -6,9 +6,14 @@ const Members = props => {
         <div className="member-list">
             {props.members.map((member, i) => (
                 <div className="member" key={i}>
-                    <h2>{member.name}</h2>
-                    <p>{member.role}</p>
-                    <p>{member.email}</p>
+                    <span>Name: </span>
+                    <span>{member.name}</span>
+                    <br/>
+                    <span>Role: </span>
+                    <span>{member.role}</span>
+                    <br/>
+                    <span>Email: </span>
+                    <span>{member.email}</span>
                 </div>
             ))}
         </div>

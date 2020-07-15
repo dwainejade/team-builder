@@ -21,7 +21,7 @@ const Form = props => {
         <form onSubmit={ 
             (event) => {
                 event.preventDefault();
-                
+                props.addNewMember(input);
                 setInput({name:'', role:'', email:''});
             }}>
 
